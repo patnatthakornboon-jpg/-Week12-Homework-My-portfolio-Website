@@ -19,7 +19,7 @@ var WORKS = {
   },
   video: {
     tag: "VIDEO",
-    title: "Assignment 9 · Keyboard",
+    title: "วิดีโอ AI",
     media: { type: "video", src: "assignment9.mp4", poster: "video-poster.webp" },
     text: "วิดีโอแนวตั้ง ความยาว 10 วินาที แสดงภาพคีย์บอร์ดลอยกลางอวกาศ พร้อมปุ่มคีย์และสวิตช์ที่หมุนรอบ",
     parts: [
