@@ -267,3 +267,11 @@ html[data-motion="off"] .work:hover, html[data-motion="off"] .skill:hover { tran
 .foot-right { text-align: right; }
 .m-caption { padding: 14px 24px 18px; color: var(--muted); font-size: .9rem; margin: 0; }
 @media (max-width: 760px) { .foot-right { text-align: left; } }
+
+/* วิดีโอหลายคลิปในป๊อปอัพ */
+.m-media.multi { display: grid; grid-template-columns: 1fr 1fr; gap: 2px; background: #000; }
+.m-video { margin: 0; background: #000; }
+.m-media.portrait .m-video video { display: block; width: 100%; max-width: none; height: min(56vh, 560px); margin: 0 auto; object-fit: contain; }
+.m-media.portrait:not(.multi) .m-video video { width: auto; max-width: 100%; height: min(62vh, 640px); }
+.m-video figcaption { padding: 8px 14px 12px; font-size: .82rem; color: var(--muted); text-align: center; background: #000; }
+@media (max-width: 760px) { .m-media.multi { grid-template-columns: 1fr; } .m-media.portrait .m-video video { height: min(60vh, 520px); } }

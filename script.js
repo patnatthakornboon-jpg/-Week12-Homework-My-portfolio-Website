@@ -147,8 +147,7 @@
     modal.scrollTop = 0;
   }
   function cleanupModal() {
-    var v = body.querySelector("video");
-    if (v) { v.pause(); v.removeAttribute("src"); v.load(); }
+    body.querySelectorAll("video").forEach(function (v) { v.pause(); v.removeAttribute("src"); v.load(); });
     body.innerHTML = "";
     document.body.style.overflow = "";
     if (lastFocus && lastFocus.focus) { try { lastFocus.focus({ preventScroll: true }); } catch (e) {} }
@@ -163,12 +162,15 @@
   function openWork(id) {
     var w = WORKS[id];
     if (!w) return;
-    var media = "";
-    if (w.media && w.media.type === "image") {
-      media = '<div class="m-media"><img src="' + esc(w.media.src) + '" alt="' + esc(w.media.alt) + '"></div>';
-    } else if (w.media && w.media.type === "video") {
-      media = '<div class="m-media portrait"><video controls playsinline preload="metadata" poster="' + esc(w.media.poster) + '" src="' + esc(w.media.src) + '">เบราว์เซอร์นี้ไม่รองรับการเล่นวิดีโอ</video></div>';
-    }
+    var list = !w.media ? [] : (Array.isArray(w.media) ? w.media : [w.media]);
+    var media = list.map(function (m) {
+      if (m.type === "image") {
+        return '<div class="m-media"><img src="' + esc(m.src) + '" alt="' + esc(m.alt) + '"></div>';
+      }
+      return '<figure class="m-video"><video controls playsinline preload="metadata" poster="' + esc(m.poster) + '" src="' + esc(m.src) + '">เบราว์เซอร์นี้ไม่รองรับการเล่นวิดีโอ</video>' +
+        (m.label ? "<figcaption>" + esc(m.label) + "</figcaption>" : "") + "</figure>";
+    }).join("");
+    if (list.length && list[0].type === "video") media = '<div class="m-media portrait' + (list.length > 1 ? " multi" : "") + '">' + media + "</div>";
     var parts = (w.parts || []).map(function (p) {
       return "<div><b>" + esc(p[0]) + "</b><span>" + esc(p[1]) + "</span></div>";
     }).join("");
@@ -185,6 +187,9 @@
       "</div>"
     );
   }
+  body.addEventListener("play", function (e) {
+    body.querySelectorAll("video").forEach(function (v) { if (v !== e.target) v.pause(); });
+  }, true);
   $$("[data-open]").forEach(function (b) {
     b.addEventListener("click", function () { openWork(b.getAttribute("data-open")); });
   });
