@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="th" data-motion="on">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ภาสณัทกร บุญเทศ | Portfolio</title>
+  <meta name="description" content="ผลงานและประวัติโดยย่อของนายภาสณัทกร บุญเทศ (อั้ม) นักศึกษาคณะเทคโนโลยีสารสนเทศและนวัตกรรม มหาวิทยาลัยกรุงเทพ">
+  <meta name="theme-color" content="#0E0707">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="ภาสณัทกร บุญเทศ | Portfolio">
+  <meta property="og:description" content="นักศึกษาเทคโนโลยีสารสนเทศ ผู้สนใจสื่อดิจิทัล การออกแบบ และการเขียนโปรแกรม">
+  <meta property="og:image" content="profile-2.webp">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='16' fill='%230E0707'/%3E%3Ccircle cx='32' cy='32' r='12' fill='%23FF6B57'/%3E%3C/svg%3E">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Anuphan:wght@300;400;500;600;700&family=Outfit:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <noscript><style>.reveal{opacity:1!important;transform:none!important}</style></noscript>
+</head>
+<body>
+  <a class="skip" href="#about">ข้ามไปยังเนื้อหา</a>
+  <div class="progress" id="progress" aria-hidden="true"></div>
+  <div class="percent" id="percent" aria-hidden="true">0%</div>
+  <div class="bg" aria-hidden="true">
+    <span class="stars"></span>
+    <span class="glow g1"></span>
+    <span class="glow g2"></span>
+    <span class="ring"></span>
+  </div>
+
+  <header class="nav" id="nav">
+    <a class="brand" href="#home">ภาสณัทกร<span>.</span></a>
+    <nav aria-label="เมนูหลัก">
+      <button class="menu-btn" id="menu-btn" aria-expanded="false" aria-controls="menu">เมนู</button>
+      <ul id="menu">
+        <li><a href="#home">Home</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#projects">Works</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+    <div class="nav-right">
+      <button class="motion-btn" id="motion-btn" aria-pressed="false" title="ลดการเคลื่อนไหว">ลดการเคลื่อนไหว</button>
+      <a class="btn small primary" href="#contact">ติดต่อ <i>↗</i></a>
+    </div>
+  </header>
+
+  <main>
+    <!-- HOME -->
+    <section class="hero" id="home">
+      <div class="hero-photo" id="hero-photo">
+        <img src="profile-2.webp" width="1200" height="1600" alt="ภาพถ่ายภาสณัทกร สวมเสื้อฮู้ดสีเทา นั่งมองไปด้านข้าง">
+      </div>
+      <div class="hero-text">
+        <p class="eyebrow"><span class="dot"></span><span>ภาสณัทกร บุญเทศ · CREATIVE PORTFOLIO</span></p>
+        <h1>เทคโนโลยีสารสนเทศ<br>และ<em>สื่อดิจิทัล</em></h1>
+        <p class="lead">นักศึกษาด้านเทคโนโลยีสารสนเทศ ผู้สนใจการตัดต่อ การถ่ายภาพ การออกแบบ และการเขียนโปรแกรม</p>
+        <div class="btns">
+          <a class="btn primary" href="#projects">สำรวจผลงาน <i>↗</i></a>
+          <a class="btn ghost" href="#about">ประวัติโดยย่อ</a>
+        </div>
+        <p class="scroll-hint">เลื่อนลงเพื่ออ่านต่อ ↓</p>
+      </div>
+    </section>
+
+    <!-- ABOUT -->
+    <section class="about" id="about">
+      <div class="about-text reveal">
+        <p class="kicker">01 — ABOUT</p>
+        <h2>นายภาสณัทกร<br><em>บุญเทศ</em> (อั้ม)</h2>
+        <p class="meta">อายุ 20 ปี · รหัสนักศึกษา 1680701875</p>
+        <p>นักศึกษาระดับปริญญาตรี คณะเทคโนโลยีสารสนเทศและนวัตกรรม มหาวิทยาลัยกรุงเทพ มีความสนใจด้านเทคโนโลยีสารสนเทศและสื่อดิจิทัล</p>
+
+        <h3>ความสนใจ</h3>
+        <ul class="chips">
+          <li>กีฬา (บาสเกตบอล)</li>
+          <li>วิดีโอเกม</li>
+          <li>เทคโนโลยีสารสนเทศ</li>
+          <li>การตัดต่อ</li>
+          <li>การถ่ายภาพ</li>
+          <li>การออกแบบ</li>
+          <li>การเขียนโปรแกรม</li>
+        </ul>
+
+        <h3>ประวัติการศึกษา</h3>
+        <ol class="edu">
+          <li><b>ปัจจุบัน</b>ระดับปริญญาตรี คณะเทคโนโลยีสารสนเทศและนวัตกรรม มหาวิทยาลัยกรุงเทพ</li>
+          <li><b>มัธยมศึกษาตอนปลาย</b>ประกาศนียบัตรวิชาชีพ (ปวช.) วิทยาลัยพณิชยการบางนา</li>
+          <li><b>มัธยมศึกษาตอนต้น</b>โรงเรียนสิริรัตนาธร</li>
+          <li><b>ประถมศึกษาตอนต้น</b>โรงเรียนวัดบางนาใน</li>
+        </ol>
+      </div>
+
+      <div class="about-photos reveal" aria-roledescription="carousel" aria-label="แกลเลอรีภาพถ่าย">
+        <div class="stage" id="stage" tabindex="0" aria-label="ใช้ปุ่มลูกศรซ้ายขวา หรือปัดเพื่อเปลี่ยนภาพ">
+          <button class="shot" data-i="0" aria-label="เปิดภาพที่ 1 ขยายเต็มจอ">
+            <img src="profile-2.webp" width="1200" height="1600" loading="lazy" draggable="false" alt="ภาพที่ 1 ภาสณัทกรยกมือแตะผมขณะมองไปด้านข้าง">
+          </button>
+          <button class="shot" data-i="1" aria-label="เปิดภาพที่ 2 ขยายเต็มจอ">
+            <img src="profile-1.webp" width="600" height="800" loading="lazy" draggable="false" alt="ภาพที่ 2 ภาสณัทกรนั่งวางมือบนโต๊ะ มองไปด้านข้าง">
+          </button>
+        </div>
+        <div class="ctrl">
+          <button id="prev" aria-label="ภาพก่อนหน้า">←</button>
+          <span id="count" aria-live="polite">1 / 2</span>
+          <button id="next" aria-label="ภาพถัดไป">→</button>
+        </div>
+        <div class="thumbs" id="thumbs" role="group" aria-label="เลือกภาพ">
+          <button data-t="0" aria-label="เลือกภาพที่ 1"><img src="profile-2.webp" width="48" height="62" loading="lazy" alt=""></button>
+          <button data-t="1" aria-label="เลือกภาพที่ 2"><img src="profile-1.webp" width="48" height="62" loading="lazy" alt=""></button>
+        </div>
+      </div>
+    </section>
+
+    <!-- SKILLS -->
+    <section class="skills" id="skills">
+      <div class="head reveal">
+        <p class="kicker">02 — SKILLS</p>
+        <h2>เครื่องมือ<em>ที่ใช้งานได้</em></h2>
+      </div>
+      <ul class="skill-list">
+        <li class="skill reveal"><span class="num">01</span><b>Python</b><small>การเขียนโปรแกรมและการวิเคราะห์ข้อมูล</small></li>
+        <li class="skill reveal"><span class="num">02</span><b>SQL</b><small>การจัดการและสืบค้นฐานข้อมูล</small></li>
+        <li class="skill reveal"><span class="num">03</span><b>HTML</b><small>โครงสร้างหน้าเว็บไซต์</small></li>
+        <li class="skill reveal"><span class="num">04</span><b>CSS</b><small>การจัดรูปแบบและเลย์เอาต์</small></li>
+        <li class="skill reveal"><span class="num">05</span><b>Git</b><small>การควบคุมเวอร์ชันของซอร์สโค้ด</small></li>
+      </ul>
+    </section>
+
+    <!-- WORKS -->
+    <section class="works" id="projects">
+      <div class="head reveal">
+        <p class="kicker">03 — WORKS</p>
+        <h2>ผลงาน<em>ที่ภาคภูมิใจ</em></h2>
+        <p class="sub">เลือกการ์ดเพื่อดูรายละเอียดเพิ่มเติม</p>
+      </div>
+
+      <div class="work-grid">
+        <article class="work big reveal">
+          <div class="thumb map"><img src="map-slide.webp" width="1442" height="807" loading="lazy" alt="ภาพแผนที่สามมิติร้านกาแฟสดลองเลย ใกล้เมกาบางนา สร้างด้วย AI"></div>
+          <div class="info">
+            <span class="tag">AI IMAGE</span>
+            <h3>แผนที่ร้านกาแฟสดลองเลย</h3>
+            <p>ภาพแผนที่สามมิติบริเวณใกล้เมกาบางนา สร้างด้วยเทคโนโลยี AI</p>
+            <button class="open" data-open="map">ดูเบื้องหลัง <i>↗</i></button>
+          </div>
+        </article>
+
+        <article class="work tall reveal">
+          <div class="thumb video">
+            <img src="video-poster.webp" width="720" height="1280" loading="lazy" alt="ภาพปกวิดีโอ คีย์บอร์ดลอยกลางอวกาศ">
+            <span class="play" aria-hidden="true">▶</span>
+            <span class="dur">0:10</span>
+          </div>
+          <div class="info">
+            <span class="tag">VIDEO</span>
+            <h3>Assignment 9 · Keyboard</h3>
+            <p>วิดีโอแนวตั้ง ความยาว 10 วินาที</p>
+            <button class="open" data-open="video">เล่นวิดีโอ <i>↗</i></button>
+          </div>
+        </article>
+
+        <article class="work reveal">
+          <div class="thumb code" aria-hidden="true"><span>&lt;/&gt;</span></div>
+          <div class="info">
+            <span class="tag">PYTHON · COLAB</span>
+            <h3>หุ่นยนต์วิ่งให้ไกลและนิ่ง</h3>
+            <p>โปรแกรมภาษา Python บน Google Colab สำหรับควบคุมการเคลื่อนที่ของหุ่นยนต์</p>
+            <button class="open" data-open="colab">ดูเบื้องหลัง <i>↗</i></button>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section class="contact" id="contact">
+      <div class="reveal">
+        <p class="kicker">04 — CONTACT</p>
+        <h2>ติดต่อ<br><em>ร่วมงานกัน</em></h2>
+        <p class="sub">ท่านสามารถติดต่อได้ผ่านช่องทางต่อไปนี้</p>
+      </div>
+      <ul class="links reveal">
+        <li><a class="btn primary" href="mailto:patnathakorn.boon@bumail.net">patnathakorn.boon@bumail.net <i>↗</i></a></li>
+        <li><a class="btn ghost" href="tel:0967095917">096-709-5917 <i>↗</i></a></li>
+        <li><a class="btn ghost" href="https://www.instagram.com/aumluvhippo/" target="_blank" rel="noopener">Instagram · aumluvhippo <i>↗</i></a></li>
+        <li><a class="btn ghost" href="https://github.com/patnatthakornboon-jpg" target="_blank" rel="noopener">GitHub · patnatthakornboon-jpg <i>↗</i></a></li>
+      </ul>
+    </section>
+  </main>
+
+  <footer class="foot">
+    <div>
+      <b>ภาสณัทกร บุญเทศ (อั้ม)</b>
+      <p>นักศึกษาคณะเทคโนโลยีสารสนเทศและนวัตกรรม มหาวิทยาลัยกรุงเทพ</p>
+      <nav class="foot-nav" aria-label="เมนูท้ายหน้า">
+        <a href="#about">About</a>
+        <a href="#skills">Skills</a>
+        <a href="#projects">Works</a>
+        <a href="#contact">Contact</a>
+        <a href="https://github.com/patnatthakornboon-jpg" target="_blank" rel="noopener">GitHub</a>
+        <a href="https://www.instagram.com/aumluvhippo/" target="_blank" rel="noopener">Instagram</a>
+      </nav>
+    </div>
+    <p class="foot-right">IT234 Introduction to Database · Week 12<br>© 2026 ภาสณัทกร บุญเทศ สงวนลิขสิทธิ์</p>
+  </footer>
+
+  <dialog id="modal" aria-labelledby="modal-title">
+    <button class="close" id="close" aria-label="ปิดหน้าต่าง">✕</button>
+    <div id="modal-body"></div>
+  </dialog>
+
+  <script src="data.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
